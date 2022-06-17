@@ -11,6 +11,30 @@ no visible changes. So all the real changed files is hard to see.
 
 Solution:
 
--have a script to copy files from ext4 and disable the git repo to watch changes in file permisions because ntfs isnt compatible
+-have a bash script to copy files from ext4 and disable the git repo to watch changes in file permisions because ntfs isnt compatible
 
--have a script to copy files from ntfs and enable the git repo to watch changes in file permisions in ext4
+-have a bash script to copy files from ntfs and enable the git repo to watch changes in file permisions in ext4
+
+
+### load the functions
+
+```bash
+source git_repo_ext4_to_ntfs.sh
+```
+
+### how to use it
+
+```bash
+# as is using rsync for copy '/' makes difference
+# remember ./tests_dir2_ext4 will copy the whole folder with inside dirs and files
+# so in order to work remember to use ./tests_dir2_ext4/ it will only copy inside dirs and files
+git_repos_ext4_to_ntfs ./tests_dir2_ext4/ ./tests_dir3_ntfs
+
+
+git_repos_ntfs_to_ext4 ./tests_dir3_ntfs/ ./tests_dir4_again_ext4
+```
+
+### run the demo
+```bash
+source test_demo.sh
+```

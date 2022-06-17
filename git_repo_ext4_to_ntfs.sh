@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # git_repos_ext4_to_ntfs origin_dir dest_dir
 git_repos_ext4_to_ntfs () {
     origin_dir=$1

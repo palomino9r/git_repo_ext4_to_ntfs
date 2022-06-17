@@ -1,3 +1,5 @@
+#!/bin/bash
+
 create_test_dirs () {
     # load script so you can use the functions
     source git_repo_ext4_to_ntfs.sh
