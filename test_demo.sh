@@ -35,21 +35,21 @@ create_test_dirs () {
     # as is using rsync for copy '/' makes difference
     # remember ./tests_dir2_ext4 will copy the whole folder with inside dirs and files
     # so in order to work remember to use ./tests_dir2_ext4/ it will only copy inside dirs and files
-    # git_repos_ext4_to_ntfs ./tests_dir2_ext4/ ./tests_dir3_ntfs
-    # ls -la
+    git_repos_ext4_to_ntfs ./tests_dir2_ext4/ ./tests_dir3_ntfs
+    ls -la
 
-    # git_repos_ntfs_to_ext4 ./tests_dir3_ntfs/ ./tests_dir4_again_ext4
-    # ls -la
+    git_repos_ntfs_to_ext4 ./tests_dir3_ntfs/ ./tests_dir4_again_ext4
+    ls -la
 
-    # cd tests_dir3_ntfs/test_dir_three/ 
-    # echo 'tests_dir3_ntfs/test_dir_three/ :'
-    # git config --list | grep core.filemode && \
-    # cd ../../
+    cd tests_dir3_ntfs/test_dir_three/ 
+    echo 'tests_dir3_ntfs/test_dir_three/ :'
+    git config --list | grep core.filemode && \
+    cd ../../
 
-    # cd tests_dir4_again_ext4/test_dir_three/
-    # echo 'tests_dir4_again_ext4/test_dir_three/ :'
-    # git config --list | grep core.filemode && \
-    # cd ../../
+    cd tests_dir4_again_ext4/test_dir_three/
+    echo 'tests_dir4_again_ext4/test_dir_three/ :'
+    git config --list | grep core.filemode && \
+    cd ../../
 }
 
 create_test_dirs
